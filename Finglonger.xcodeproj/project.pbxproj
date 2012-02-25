@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		355AC27014F8FD82007AEA55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC26F14F8FD82007AEA55 /* Cocoa.framework */; };
+		355AC27A14F8FD82007AEA55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355AC27814F8FD82007AEA55 /* InfoPlist.strings */; };
+		355AC27C14F8FD82007AEA55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC27B14F8FD82007AEA55 /* main.m */; };
+		355AC28014F8FD82007AEA55 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 355AC27E14F8FD82007AEA55 /* Credits.rtf */; };
+		355AC28314F8FD82007AEA55 /* KFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */; };
+		355AC28614F8FD82007AEA55 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355AC28414F8FD82007AEA55 /* MainMenu.xib */; };
+		355AC28E14F8FD83007AEA55 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC28D14F8FD83007AEA55 /* SenTestingKit.framework */; };
+		355AC28F14F8FD83007AEA55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC26F14F8FD82007AEA55 /* Cocoa.framework */; };
+		355AC29714F8FD83007AEA55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355AC29514F8FD83007AEA55 /* InfoPlist.strings */; };
+		355AC29A14F8FD83007AEA55 /* FinglongerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC29914F8FD83007AEA55 /* FinglongerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		355AC29014F8FD83007AEA55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 355AC26214F8FD82007AEA55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 355AC26A14F8FD82007AEA55;
+			remoteInfo = Finglonger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		355AC26B14F8FD82007AEA55 /* Finglonger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finglonger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		355AC26F14F8FD82007AEA55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		355AC27214F8FD82007AEA55 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		355AC27314F8FD82007AEA55 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		355AC27414F8FD82007AEA55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		355AC27714F8FD82007AEA55 /* Finglonger-Info.plist */ = {isa = PBXFileReference; path = "Finglonger-Info.plist"; sourceTree = "<group>"; };
+		355AC27914F8FD82007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		355AC27B14F8FD82007AEA55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		355AC27D14F8FD82007AEA55 /* Finglonger-Prefix.pch */ = {isa = PBXFileReference; path = "Finglonger-Prefix.pch"; sourceTree = "<group>"; };
+		355AC27F14F8FD82007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		355AC28114F8FD82007AEA55 /* KFLAppDelegate.h */ = {isa = PBXFileReference; path = KFLAppDelegate.h; sourceTree = "<group>"; };
+		355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFLAppDelegate.m; sourceTree = "<group>"; };
+		355AC28514F8FD82007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		355AC28C14F8FD83007AEA55 /* FinglongerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinglongerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		355AC28D14F8FD83007AEA55 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		355AC29414F8FD83007AEA55 /* FinglongerTests-Info.plist */ = {isa = PBXFileReference; path = "FinglongerTests-Info.plist"; sourceTree = "<group>"; };
+		355AC29614F8FD83007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		355AC29814F8FD83007AEA55 /* FinglongerTests.h */ = {isa = PBXFileReference; path = FinglongerTests.h; sourceTree = "<group>"; };
+		355AC29914F8FD83007AEA55 /* FinglongerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinglongerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		355AC26814F8FD82007AEA55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355AC27014F8FD82007AEA55 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355AC28814F8FD83007AEA55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355AC28E14F8FD83007AEA55 /* SenTestingKit.framework in Frameworks */,
+				355AC28F14F8FD83007AEA55 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		355AC26014F8FD82007AEA55 = {
+			isa = PBXGroup;
+			children = (
+				355AC27514F8FD82007AEA55 /* Finglonger */,
+				355AC29214F8FD83007AEA55 /* FinglongerTests */,
+				355AC26E14F8FD82007AEA55 /* Frameworks */,
+				355AC26C14F8FD82007AEA55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		355AC26C14F8FD82007AEA55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				355AC26B14F8FD82007AEA55 /* Finglonger.app */,
+				355AC28C14F8FD83007AEA55 /* FinglongerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		355AC26E14F8FD82007AEA55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				355AC26F14F8FD82007AEA55 /* Cocoa.framework */,
+				355AC28D14F8FD83007AEA55 /* SenTestingKit.framework */,
+				355AC27114F8FD82007AEA55 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		355AC27114F8FD82007AEA55 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				355AC27214F8FD82007AEA55 /* AppKit.framework */,
+				355AC27314F8FD82007AEA55 /* CoreData.framework */,
+				355AC27414F8FD82007AEA55 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		355AC27514F8FD82007AEA55 /* Finglonger */ = {
+			isa = PBXGroup;
+			children = (
+				355AC28114F8FD82007AEA55 /* KFLAppDelegate.h */,
+				355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */,
+				355AC28414F8FD82007AEA55 /* MainMenu.xib */,
+				355AC27614F8FD82007AEA55 /* Supporting Files */,
+			);
+			path = Finglonger;
+			sourceTree = "<group>";
+		};
+		355AC27614F8FD82007AEA55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				355AC27714F8FD82007AEA55 /* Finglonger-Info.plist */,
+				355AC27814F8FD82007AEA55 /* InfoPlist.strings */,
+				355AC27B14F8FD82007AEA55 /* main.m */,
+				355AC27D14F8FD82007AEA55 /* Finglonger-Prefix.pch */,
+				355AC27E14F8FD82007AEA55 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		355AC29214F8FD83007AEA55 /* FinglongerTests */ = {
+			isa = PBXGroup;
+			children = (
+				355AC29814F8FD83007AEA55 /* FinglongerTests.h */,
+				355AC29914F8FD83007AEA55 /* FinglongerTests.m */,
+				355AC29314F8FD83007AEA55 /* Supporting Files */,
+			);
+			path = FinglongerTests;
+			sourceTree = "<group>";
+		};
+		355AC29314F8FD83007AEA55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				355AC29414F8FD83007AEA55 /* FinglongerTests-Info.plist */,
+				355AC29514F8FD83007AEA55 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		355AC26A14F8FD82007AEA55 /* Finglonger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355AC29D14F8FD83007AEA55 /* Build configuration list for PBXNativeTarget "Finglonger" */;
+			buildPhases = (
+				355AC26714F8FD82007AEA55 /* Sources */,
+				355AC26814F8FD82007AEA55 /* Frameworks */,
+				355AC26914F8FD82007AEA55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Finglonger;
+			productName = Finglonger;
+			productReference = 355AC26B14F8FD82007AEA55 /* Finglonger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		355AC28B14F8FD83007AEA55 /* FinglongerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 355AC2A014F8FD83007AEA55 /* Build configuration list for PBXNativeTarget "FinglongerTests" */;
+			buildPhases = (
+				355AC28714F8FD83007AEA55 /* Sources */,
+				355AC28814F8FD83007AEA55 /* Frameworks */,
+				355AC28914F8FD83007AEA55 /* Resources */,
+				355AC28A14F8FD83007AEA55 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				355AC29114F8FD83007AEA55 /* PBXTargetDependency */,
+			);
+			name = FinglongerTests;
+			productName = FinglongerTests;
+			productReference = 355AC28C14F8FD83007AEA55 /* FinglongerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		355AC26214F8FD82007AEA55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = KONDENSATOR;
+			};
+			buildConfigurationList = 355AC26514F8FD82007AEA55 /* Build configuration list for PBXProject "Finglonger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 355AC26014F8FD82007AEA55;
+			productRefGroup = 355AC26C14F8FD82007AEA55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				355AC26A14F8FD82007AEA55 /* Finglonger */,
+				355AC28B14F8FD83007AEA55 /* FinglongerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		355AC26914F8FD82007AEA55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355AC27A14F8FD82007AEA55 /* InfoPlist.strings in Resources */,
+				355AC28014F8FD82007AEA55 /* Credits.rtf in Resources */,
+				355AC28614F8FD82007AEA55 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355AC28914F8FD83007AEA55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355AC29714F8FD83007AEA55 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		355AC28A14F8FD83007AEA55 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		355AC26714F8FD82007AEA55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355AC27C14F8FD82007AEA55 /* main.m in Sources */,
+				355AC28314F8FD82007AEA55 /* KFLAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		355AC28714F8FD83007AEA55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355AC29A14F8FD83007AEA55 /* FinglongerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		355AC29114F8FD83007AEA55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 355AC26A14F8FD82007AEA55 /* Finglonger */;
+			targetProxy = 355AC29014F8FD83007AEA55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		355AC27814F8FD82007AEA55 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355AC27914F8FD82007AEA55 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		355AC27E14F8FD82007AEA55 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355AC27F14F8FD82007AEA55 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		355AC28414F8FD82007AEA55 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355AC28514F8FD82007AEA55 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		355AC29514F8FD83007AEA55 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				355AC29614F8FD83007AEA55 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		355AC29B14F8FD83007AEA55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		355AC29C14F8FD83007AEA55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		355AC29E14F8FD83007AEA55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Finglonger/Finglonger-Prefix.pch";
+				INFOPLIST_FILE = "Finglonger/Finglonger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		355AC29F14F8FD83007AEA55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Finglonger/Finglonger-Prefix.pch";
+				INFOPLIST_FILE = "Finglonger/Finglonger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		355AC2A114F8FD83007AEA55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Finglonger.app/Contents/MacOS/Finglonger";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Finglonger/Finglonger-Prefix.pch";
+				INFOPLIST_FILE = "FinglongerTests/FinglongerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		355AC2A214F8FD83007AEA55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Finglonger.app/Contents/MacOS/Finglonger";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Finglonger/Finglonger-Prefix.pch";
+				INFOPLIST_FILE = "FinglongerTests/FinglongerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		355AC26514F8FD82007AEA55 /* Build configuration list for PBXProject "Finglonger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355AC29B14F8FD83007AEA55 /* Debug */,
+				355AC29C14F8FD83007AEA55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		355AC29D14F8FD83007AEA55 /* Build configuration list for PBXNativeTarget "Finglonger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355AC29E14F8FD83007AEA55 /* Debug */,
+				355AC29F14F8FD83007AEA55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		355AC2A014F8FD83007AEA55 /* Build configuration list for PBXNativeTarget "FinglongerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				355AC2A114F8FD83007AEA55 /* Debug */,
+				355AC2A214F8FD83007AEA55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 355AC26214F8FD82007AEA55 /* Project object */;
+}
