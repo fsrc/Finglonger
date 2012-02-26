@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class KFLLongKeysManager;
 @interface KFLAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (retain) KFLLongKeysManager *manager;
 
 @end

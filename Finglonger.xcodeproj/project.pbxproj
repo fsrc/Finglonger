@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		354C32AB14F9995C003D1D80 /* KFLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 354C32AA14F9995C003D1D80 /* KFLUtils.m */; };
 		355AC27014F8FD82007AEA55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC26F14F8FD82007AEA55 /* Cocoa.framework */; };
 		355AC27A14F8FD82007AEA55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355AC27814F8FD82007AEA55 /* InfoPlist.strings */; };
 		355AC27C14F8FD82007AEA55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC27B14F8FD82007AEA55 /* main.m */; };
 		355AC28014F8FD82007AEA55 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 355AC27E14F8FD82007AEA55 /* Credits.rtf */; };
 		355AC28314F8FD82007AEA55 /* KFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */; };
-		355AC28614F8FD82007AEA55 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355AC28414F8FD82007AEA55 /* MainMenu.xib */; };
 		355AC28E14F8FD83007AEA55 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC28D14F8FD83007AEA55 /* SenTestingKit.framework */; };
 		355AC28F14F8FD83007AEA55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC26F14F8FD82007AEA55 /* Cocoa.framework */; };
 		355AC29714F8FD83007AEA55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355AC29514F8FD83007AEA55 /* InfoPlist.strings */; };
 		355AC29A14F8FD83007AEA55 /* FinglongerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC29914F8FD83007AEA55 /* FinglongerTests.m */; };
+		355AC2A414F8FD9D007AEA55 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC2A314F8FD9D007AEA55 /* Carbon.framework */; };
+		355AC2A614F8FE04007AEA55 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 355AC2A514F8FE04007AEA55 /* Application.xib */; };
+		355AC2B114F8FEC9007AEA55 /* KFLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC2A814F8FEC9007AEA55 /* KFLElement.m */; };
+		355AC2B314F8FEC9007AEA55 /* KFLLongKeysManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC2AC14F8FEC9007AEA55 /* KFLLongKeysManager.m */; };
+		355AC2B414F8FEC9007AEA55 /* KFLOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC2AE14F8FEC9007AEA55 /* KFLOverlayWindow.m */; };
+		355AC2B514F8FEC9007AEA55 /* KFLOverlayWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC2B014F8FEC9007AEA55 /* KFLOverlayWindowController.m */; };
+		35FA58E214F9021A0030921F /* KFLOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA58E114F9021A0030921F /* KFLOverlayView.m */; };
+		35FA58E514F9042C0030921F /* finglonger.png in Resources */ = {isa = PBXBuildFile; fileRef = 35FA58E414F9042C0030921F /* finglonger.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,25 +38,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		354C32A914F9995C003D1D80 /* KFLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFLUtils.h; sourceTree = "<group>"; };
+		354C32AA14F9995C003D1D80 /* KFLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFLUtils.m; sourceTree = "<group>"; };
 		355AC26B14F8FD82007AEA55 /* Finglonger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finglonger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355AC26F14F8FD82007AEA55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		355AC27214F8FD82007AEA55 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		355AC27314F8FD82007AEA55 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		355AC27414F8FD82007AEA55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		355AC27714F8FD82007AEA55 /* Finglonger-Info.plist */ = {isa = PBXFileReference; path = "Finglonger-Info.plist"; sourceTree = "<group>"; };
+		355AC27714F8FD82007AEA55 /* Finglonger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Finglonger-Info.plist"; sourceTree = "<group>"; };
 		355AC27914F8FD82007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		355AC27B14F8FD82007AEA55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		355AC27D14F8FD82007AEA55 /* Finglonger-Prefix.pch */ = {isa = PBXFileReference; path = "Finglonger-Prefix.pch"; sourceTree = "<group>"; };
+		355AC27D14F8FD82007AEA55 /* Finglonger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Finglonger-Prefix.pch"; sourceTree = "<group>"; };
 		355AC27F14F8FD82007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		355AC28114F8FD82007AEA55 /* KFLAppDelegate.h */ = {isa = PBXFileReference; path = KFLAppDelegate.h; sourceTree = "<group>"; };
-		355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFLAppDelegate.m; sourceTree = "<group>"; };
-		355AC28514F8FD82007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		355AC28114F8FD82007AEA55 /* KFLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFLAppDelegate.h; sourceTree = "<group>"; };
+		355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KFLAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		355AC28C14F8FD83007AEA55 /* FinglongerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinglongerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		355AC28D14F8FD83007AEA55 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		355AC29414F8FD83007AEA55 /* FinglongerTests-Info.plist */ = {isa = PBXFileReference; path = "FinglongerTests-Info.plist"; sourceTree = "<group>"; };
+		355AC29414F8FD83007AEA55 /* FinglongerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FinglongerTests-Info.plist"; sourceTree = "<group>"; };
 		355AC29614F8FD83007AEA55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		355AC29814F8FD83007AEA55 /* FinglongerTests.h */ = {isa = PBXFileReference; path = FinglongerTests.h; sourceTree = "<group>"; };
+		355AC29814F8FD83007AEA55 /* FinglongerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinglongerTests.h; sourceTree = "<group>"; };
 		355AC29914F8FD83007AEA55 /* FinglongerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinglongerTests.m; sourceTree = "<group>"; };
+		355AC2A314F8FD9D007AEA55 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		355AC2A514F8FE04007AEA55 /* Application.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Application.xib; sourceTree = "<group>"; };
+		355AC2A714F8FEC8007AEA55 /* KFLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KFLElement.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		355AC2A814F8FEC9007AEA55 /* KFLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KFLElement.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		355AC2AB14F8FEC9007AEA55 /* KFLLongKeysManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KFLLongKeysManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		355AC2AC14F8FEC9007AEA55 /* KFLLongKeysManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KFLLongKeysManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		355AC2AD14F8FEC9007AEA55 /* KFLOverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KFLOverlayWindow.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		355AC2AE14F8FEC9007AEA55 /* KFLOverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KFLOverlayWindow.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		355AC2AF14F8FEC9007AEA55 /* KFLOverlayWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KFLOverlayWindowController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		355AC2B014F8FEC9007AEA55 /* KFLOverlayWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFLOverlayWindowController.m; sourceTree = "<group>"; };
+		35FA58E014F9021A0030921F /* KFLOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFLOverlayView.h; sourceTree = "<group>"; };
+		35FA58E114F9021A0030921F /* KFLOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFLOverlayView.m; sourceTree = "<group>"; };
+		35FA58E414F9042C0030921F /* finglonger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finglonger.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355AC2A414F8FD9D007AEA55 /* Carbon.framework in Frameworks */,
 				355AC27014F8FD82007AEA55 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +98,7 @@
 		355AC26014F8FD82007AEA55 = {
 			isa = PBXGroup;
 			children = (
+				35FA58E414F9042C0030921F /* finglonger.png */,
 				355AC27514F8FD82007AEA55 /* Finglonger */,
 				355AC29214F8FD83007AEA55 /* FinglongerTests */,
 				355AC26E14F8FD82007AEA55 /* Frameworks */,
@@ -94,6 +118,7 @@
 		355AC26E14F8FD82007AEA55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				355AC2A314F8FD9D007AEA55 /* Carbon.framework */,
 				355AC26F14F8FD82007AEA55 /* Cocoa.framework */,
 				355AC28D14F8FD83007AEA55 /* SenTestingKit.framework */,
 				355AC27114F8FD82007AEA55 /* Other Frameworks */,
@@ -114,9 +139,20 @@
 		355AC27514F8FD82007AEA55 /* Finglonger */ = {
 			isa = PBXGroup;
 			children = (
+				355AC2A714F8FEC8007AEA55 /* KFLElement.h */,
+				355AC2A814F8FEC9007AEA55 /* KFLElement.m */,
+				354C32A914F9995C003D1D80 /* KFLUtils.h */,
+				354C32AA14F9995C003D1D80 /* KFLUtils.m */,
+				355AC2AB14F8FEC9007AEA55 /* KFLLongKeysManager.h */,
+				355AC2AC14F8FEC9007AEA55 /* KFLLongKeysManager.m */,
+				35FA58E014F9021A0030921F /* KFLOverlayView.h */,
+				35FA58E114F9021A0030921F /* KFLOverlayView.m */,
+				355AC2AD14F8FEC9007AEA55 /* KFLOverlayWindow.h */,
+				355AC2AE14F8FEC9007AEA55 /* KFLOverlayWindow.m */,
+				355AC2AF14F8FEC9007AEA55 /* KFLOverlayWindowController.h */,
+				355AC2B014F8FEC9007AEA55 /* KFLOverlayWindowController.m */,
 				355AC28114F8FD82007AEA55 /* KFLAppDelegate.h */,
 				355AC28214F8FD82007AEA55 /* KFLAppDelegate.m */,
-				355AC28414F8FD82007AEA55 /* MainMenu.xib */,
 				355AC27614F8FD82007AEA55 /* Supporting Files */,
 			);
 			path = Finglonger;
@@ -125,6 +161,7 @@
 		355AC27614F8FD82007AEA55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				355AC2A514F8FE04007AEA55 /* Application.xib */,
 				355AC27714F8FD82007AEA55 /* Finglonger-Info.plist */,
 				355AC27814F8FD82007AEA55 /* InfoPlist.strings */,
 				355AC27B14F8FD82007AEA55 /* main.m */,
@@ -226,7 +263,8 @@
 			files = (
 				355AC27A14F8FD82007AEA55 /* InfoPlist.strings in Resources */,
 				355AC28014F8FD82007AEA55 /* Credits.rtf in Resources */,
-				355AC28614F8FD82007AEA55 /* MainMenu.xib in Resources */,
+				355AC2A614F8FE04007AEA55 /* Application.xib in Resources */,
+				35FA58E514F9042C0030921F /* finglonger.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +301,12 @@
 			files = (
 				355AC27C14F8FD82007AEA55 /* main.m in Sources */,
 				355AC28314F8FD82007AEA55 /* KFLAppDelegate.m in Sources */,
+				355AC2B114F8FEC9007AEA55 /* KFLElement.m in Sources */,
+				355AC2B314F8FEC9007AEA55 /* KFLLongKeysManager.m in Sources */,
+				355AC2B414F8FEC9007AEA55 /* KFLOverlayWindow.m in Sources */,
+				355AC2B514F8FEC9007AEA55 /* KFLOverlayWindowController.m in Sources */,
+				35FA58E214F9021A0030921F /* KFLOverlayView.m in Sources */,
+				354C32AB14F9995C003D1D80 /* KFLUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +343,6 @@
 				355AC27F14F8FD82007AEA55 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		355AC28414F8FD82007AEA55 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				355AC28514F8FD82007AEA55 /* en */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		355AC29514F8FD83007AEA55 /* InfoPlist.strings */ = {
@@ -436,6 +472,7 @@
 				355AC29F14F8FD83007AEA55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		355AC2A014F8FD83007AEA55 /* Build configuration list for PBXNativeTarget "FinglongerTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +481,7 @@
 				355AC2A214F8FD83007AEA55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
