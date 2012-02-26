@@ -11,6 +11,7 @@
 #import "KFLElement.h"
 #import <QuartzCore/QuartzCore.h>
 #import "KFLUtils.h"
+#import "KFLHintLabel.h"
 
 @implementation KFLOverlayWindowController
 @synthesize items, filter, delegate, screenHeight, screenWidth;
@@ -52,11 +53,11 @@
     NSUInteger labelWidth  = 40;
     NSUInteger labelHeight = 20;
     
-    NSTextField *tf = [[NSTextField alloc] initWithFrame:
-                       NSMakeRect(pos.x+labelWidth <= screenWidth ? pos.x : screenWidth-labelWidth, 
-                                  screenHeight-pos.y-labelHeight, 
-                                  labelWidth, 
-                                  labelHeight)];
+    KFLHintLabel *tf = [[KFLHintLabel alloc] initWithFrame:
+                        NSMakeRect(pos.x+labelWidth <= screenWidth ? pos.x : screenWidth-labelWidth, 
+                                   screenHeight-pos.y-labelHeight, 
+                                   labelWidth, 
+                                   labelHeight)];
     
     [tf setTextColor:[NSColor whiteColor]];
     [tf setBackgroundColor:[NSColor colorWithCalibratedRed:0.2 

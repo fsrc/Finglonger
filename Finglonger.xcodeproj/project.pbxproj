@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		354C32AB14F9995C003D1D80 /* KFLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 354C32AA14F9995C003D1D80 /* KFLUtils.m */; };
+		354C32AF14FA7451003D1D80 /* KFLHintLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 354C32AE14FA7451003D1D80 /* KFLHintLabel.m */; };
 		355AC27014F8FD82007AEA55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355AC26F14F8FD82007AEA55 /* Cocoa.framework */; };
 		355AC27A14F8FD82007AEA55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 355AC27814F8FD82007AEA55 /* InfoPlist.strings */; };
 		355AC27C14F8FD82007AEA55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 355AC27B14F8FD82007AEA55 /* main.m */; };
@@ -40,6 +41,8 @@
 /* Begin PBXFileReference section */
 		354C32A914F9995C003D1D80 /* KFLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFLUtils.h; sourceTree = "<group>"; };
 		354C32AA14F9995C003D1D80 /* KFLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFLUtils.m; sourceTree = "<group>"; };
+		354C32AD14FA7450003D1D80 /* KFLHintLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFLHintLabel.h; sourceTree = "<group>"; };
+		354C32AE14FA7451003D1D80 /* KFLHintLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFLHintLabel.m; sourceTree = "<group>"; };
 		355AC26B14F8FD82007AEA55 /* Finglonger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finglonger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355AC26F14F8FD82007AEA55 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		355AC27214F8FD82007AEA55 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -143,6 +146,8 @@
 				355AC2A814F8FEC9007AEA55 /* KFLElement.m */,
 				354C32A914F9995C003D1D80 /* KFLUtils.h */,
 				354C32AA14F9995C003D1D80 /* KFLUtils.m */,
+				354C32AD14FA7450003D1D80 /* KFLHintLabel.h */,
+				354C32AE14FA7451003D1D80 /* KFLHintLabel.m */,
 				355AC2AB14F8FEC9007AEA55 /* KFLLongKeysManager.h */,
 				355AC2AC14F8FEC9007AEA55 /* KFLLongKeysManager.m */,
 				35FA58E014F9021A0030921F /* KFLOverlayView.h */,
@@ -307,6 +312,7 @@
 				355AC2B514F8FEC9007AEA55 /* KFLOverlayWindowController.m in Sources */,
 				35FA58E214F9021A0030921F /* KFLOverlayView.m in Sources */,
 				354C32AB14F9995C003D1D80 /* KFLUtils.m in Sources */,
+				354C32AF14FA7451003D1D80 /* KFLHintLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

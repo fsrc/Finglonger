@@ -40,11 +40,11 @@
         [self setExcludedFromWindowsMenu:YES];
         [self setHidesOnDeactivate:NO];
         
-        [self setBackgroundColor:[NSColor clearColor]];
-//        [self setBackgroundColor:[NSColor colorWithDeviceRed:0.0f 
-//                                                       green:0.0f 
-//                                                        blue:0.3f 
-//                                                       alpha:0.2]];
+//        [self setBackgroundColor:[NSColor clearColor]];
+        [self setBackgroundColor:[NSColor colorWithDeviceRed:0.0f 
+                                                       green:0.0f 
+                                                        blue:0.3f 
+                                                       alpha:0.2]];
         
         [self setOpaque:NO];
         [self setCollectionBehavior:
