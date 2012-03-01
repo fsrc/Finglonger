@@ -40,21 +40,20 @@
     CFArrayRef namesRef;
     int axerror = AXUIElementCopyAttributeNames(ref, &namesRef);
     
-    assert(axerror == kAXErrorSuccess && "Could not copy AX attribute names");
+//    assert(axerror == kAXErrorSuccess && "Could not copy AX attribute names");
 
-    return (__bridge NSArray*)namesRef;
+    return axerror == kAXErrorSuccess ? (__bridge NSArray*)namesRef : nil;
 }
 +(NSArray*)actionsIn:(AXUIElementRef)ref{
     CFArrayRef namesRef;
     int axerror = AXUIElementCopyActionNames(ref, &namesRef);
     
-    if (axerror != kAXErrorSuccess) {
-        return [[NSArray alloc] init];
-    }
-    assert(axerror == kAXErrorSuccess && "Could not copy AX action names");
+//    if (axerror != kAXErrorSuccess) {
+//        return [[NSArray alloc] init];
+//    }
+//    assert(axerror == kAXErrorSuccess && "Could not copy AX action names");
     
-    return (__bridge NSArray*)namesRef;
-
+    return axerror == kAXErrorSuccess ? (__bridge NSArray*)namesRef : nil;
 }
 +(CFTypeRef)copyAttribute:(CFStringRef)attrib 
                      from:(AXUIElementRef)ref{
@@ -64,10 +63,10 @@
     
     axerror = AXUIElementCopyAttributeValue(ref, attrib, &value);
     
-//    assert(axerror == kAXErrorSuccess || axerror == kAXErrorNoValue && "Could not copy AX attribute");
+    assert(axerror == kAXErrorSuccess || axerror == kAXErrorNoValue && "Could not copy AX attribute");
     
     return axerror == kAXErrorSuccess ? value :
-//           axerror == kAXErrorNoValue ? nil :
+           axerror == kAXErrorNoValue ? nil :
            nil;
 }
 
@@ -85,14 +84,22 @@
 +(NSArray*)newElementArray:(CFStringRef)type 
                 fromParent:(AXUIElementRef)ref{
     
-    CFTypeRef   items = [KFLElement copyAttribute:type from:ref];
+    CFTypeRef   items = [KFLElement copyAttribute:type from:ref];    
     NSMutableArray *result = [[NSMutableArray alloc] init];
         
     if(items != NULL) {
         NSArray *items_array = (__bridge NSArray*)items;
         
         for (id item in items_array) {
-            [result addObject:[[KFLElement alloc] initWithElement:(__bridge AXUIElementRef)item]];
+            KFLElement *el = [[KFLElement alloc] initWithElement:(__bridge AXUIElementRef)item];
+            
+            if ([el hasRole]) {
+                if (![[el role] isEqualToString:@"AXList"]) {
+                    [result addObject:el];
+                } else {
+                    [result addObjectsFromArray:[el children]];
+                }
+            }
         }        
     }
     
@@ -116,6 +123,14 @@
     return [KFLElement applicationWithPid:[[NSRunningApplication currentApplication] processIdentifier]];
 }
 
++(void)setTimeout:(float)secs {
+    AXUIElementRef systemElementRef = AXUIElementCreateSystemWide();
+  
+    AXUIElementSetMessagingTimeout(systemElementRef, secs);
+
+    CFRelease(systemElementRef);
+}
+
 /*
  LIFE CYCLE
  */
@@ -135,12 +150,16 @@
     return [KFLElement nodesIn:self];
 }
 
+#define DEFAULT(__var, __value) __var = __var ? __var : __value
+
 /*
  GENERIC FUNCTIONS
  */
 -(BOOL)hasAttribute:(CFStringRef)name {
     if (!attributes) {
         attributes = [KFLElement attributesIn:element];
+        
+        DEFAULT(attributes, [NSArray new]);
     }
 
     return [attributes indexOfObject:(__bridge id) name] != NSNotFound;
@@ -148,10 +167,14 @@
 -(BOOL)hasAction:(CFStringRef)name {
     if (!actions) {
         actions = [KFLElement actionsIn:element];   
+
+        DEFAULT(actions, [NSArray new]);
     }
     
     return [actions indexOfObject:(__bridge id) name] != NSNotFound;
 }
+#undef DEFAULT
+
 -(CFTypeRef)copyAttribute:(CFStringRef)attrib {
     return [KFLElement copyAttribute:attrib from:element];
 }
@@ -264,6 +287,9 @@ kAXAttributeBool(kAXMainAttribute,
                  main,
                  setMain)
 
+kAXAttributeString(kAXRoleAttribute,
+                   hasRole, 
+                   role)
 kAXAttributeString(kAXTitleAttribute,
                    hasTitle, 
                    title)

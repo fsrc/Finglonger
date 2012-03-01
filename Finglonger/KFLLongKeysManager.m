@@ -30,6 +30,7 @@
     @property (assign) int32_t number;
     @property (assign) int32_t pid;
     @property (retain) NSString* name;
+    @property (retain) NSString* ownerName;
     @property (assign) BOOL main;
     @property (assign) BOOL valid;
     @property (assign) int depth;
@@ -45,6 +46,7 @@
     number, 
     pid,
     name,
+    ownerName,
     main,
     valid,
     depth,
@@ -60,35 +62,47 @@
         CGRectMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)[dict objectForKey:@"kCGWindowBounds"], &f);
         
         NSString *windowName = [dict objectForKey:@"kCGWindowName"];
+        NSString *owner = [dict objectForKey:@"kCGWindowOwnerName"];
         
         self.depth = z;
         self.frame = f;
         self.number = [[dict objectForKey:@"kCGWindowNumber"] intValue];
         self.pid = [[dict objectForKey:@"kCGWindowOwnerPID"] intValue];
         self.name = windowName != nil ? windowName : @"";
+        self.ownerName = owner != nil ? owner : @"";
         self.valid = NO;
     }
     return self;
 }
 - (void)updateWithAccessibility {
     self.application = [KFLElement applicationWithPid:self.pid];
-    
-    NSArray* windows = [self.application allWindows];
-    
-    for (KFLElement *w in windows) {
-        CGPoint p = [w position];
-        CGSize s = [w size];
 
-        if(CGPointEqualToPoint(p, self.frame.origin) 
-           && CGSizeEqualToSize(s, self.frame.size)) {
-            self.window = w;
-            self.valid = YES;
+    if ([self.ownerName isEqualToString:@"Dock"]) {
+        self.window = self.application;
+        self.valid = YES;
+        self.frame = CGRectZero;
+    } else if([self.ownerName isEqualToString:@"Window Server"]) {
+        self.window = self.application;
+        self.valid = YES;
+        self.frame = CGRectZero;
+        
+    } else {
+        NSArray* windows = [self.application children];
+        
+        for (KFLElement *w in windows) {
+            CGPoint p = [w position];
+            CGSize s = [w size];
+            
+            if(CGPointEqualToPoint(p, self.frame.origin) 
+               && CGSizeEqualToSize(s, self.frame.size)) {
+                self.window = w;
+                self.valid = YES;
+            }
+        }        
+        if([self.window hasMain]) {
+            self.main = [self.window main];
         }
-    }
-    
-    if([self.window hasMain]) {
-        self.main = [self.window main];
-    }
+    }        
 }
 @end
 
@@ -165,6 +179,8 @@
         self.power2 = self.power1ary.count+1;
         self.power3 = self.power2ary.count+1;
         self.power4 = self.power3ary.count+1;
+        
+        [KFLElement setTimeout:10];
     }
     return self;
 }
@@ -177,17 +193,13 @@
     int z = 0;
     
     for (NSDictionary* window in windows) {
-        NSString *ownerName = [window objectForKey:@"kCGWindowOwnerName"];
+        Window *w = [[Window alloc] initWithDictionary:window 
+                                              andDepth:z];
         
-        if (![ownerName isEqualTo:@"Window Server"] && ![ownerName isEqualTo:@"Dock"]) {
-            Window *w = [[Window alloc] initWithDictionary:window 
-                                                  andDepth:z];
-            
-            [w updateWithAccessibility];
-            
-            if ([w valid]) {
-                [stack addWindow:w];
-            }
+        [w updateWithAccessibility];
+        
+        if ([w valid]) {
+            [stack addWindow:w];
         }
         z++;
     }
@@ -237,7 +249,6 @@
                 }
             }            
         }
-        
         // ADD ALL DEEP CHILDS
         [items addObjectsFromArray:[KFLLongKeysManager hintsFromElementArray:[w.window nodes]
                                                                    andWindow:w]];
@@ -277,9 +288,9 @@
 
 - (void)showHints {
     
-    NSArray *visible = [KFLLongKeysManager visibleWindows];
-    NSArray *hints = [KFLLongKeysManager hintsFromWindows:visible];
-    NSScreen *screen = [NSScreen mainScreen];
+    NSArray  *visible = [KFLLongKeysManager visibleWindows];
+    NSArray  *hints   = [KFLLongKeysManager hintsFromWindows:visible];
+    NSScreen *screen  = [NSScreen mainScreen];
         
     self.frontmost = [KFLLongKeysManager mainWindow:visible];
     self.activeController = [KFLOverlayWindowController windowForScreen:screen];

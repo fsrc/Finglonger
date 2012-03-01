@@ -17,6 +17,7 @@
 +(KFLElement*)systemElement;
 +(KFLElement*)applicationWithPid:(UInt32)pid;
 +(KFLElement*)thisApplication;
++(void)setTimeout:(float)secs;
 
 - (NSArray*)nodes;
 
@@ -72,6 +73,10 @@ kAXAttributeBool(kAXMainAttribute,
                  hasMain,
                  main,
                  setMain)
+
+kAXAttributeString(kAXRoleAttribute,
+                   hasRole, 
+                   role)
 
 kAXAttributeString(kAXTitleAttribute,
                    hasTitle, 
