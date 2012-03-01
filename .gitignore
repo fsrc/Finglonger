@@ -5,3 +5,6 @@
 build/
 
 *.xcodeproj/ !*.xcodeproj/project.pbxproj
+*.xcuserstate
+Finglonger.xcodeproj/xcuserdata
+Finglonger.xcodeproj/project.xcworkspace
