@@ -1,0 +1,12 @@
+Purpose
+========
+Navigate Mac OS X without using mouse. Watch http://www.youtube.com/watch?v=V0JjzKMq7Fs for more information.
+
+Installation
+============
+Open project in Xcode, compile and run the application.
+
+Usage
+======
+Simply press Option+Cmd+Space and navigate using keystrings.
+
